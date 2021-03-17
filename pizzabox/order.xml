@@ -1,0 +1,649 @@
+<?xml version="1.0"?>
+<Order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <APizza xsi:type="HawaiianPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Ham</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Pineapple</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Hawaiian Pizza</Name>
+      <Total>9.5</Total>
+    </APizza>
+    <APizza xsi:type="CheesePizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Cheese Pizza</Name>
+      <Total>8.75</Total>
+    </APizza>
+  </Pizzas>
+  <StoreName>Chicago Store</StoreName>
+  <Cust>
+    <Name>david</Name>
+    <Email>david@mail.com</Email>
+    <Orders />
+  </Cust>
+  <Total>19.5275</Total>
+</Order><?xml version="1.0"?>
+<Order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <APizza xsi:type="HawaiianPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Ham</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Pineapple</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Hawaiian Pizza</Name>
+      <Total>9.5</Total>
+    </APizza>
+  </Pizzas>
+  <StoreName>Chicago Store</StoreName>
+  <Cust>
+    <Name>cat</Name>
+    <Email>cat@gmail.com</Email>
+    <Orders />
+  </Cust>
+  <Total>10.165000000000001</Total>
+</Order><?xml version="1.0"?>
+<Order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <APizza xsi:type="HawaiianPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Ham</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Pineapple</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Hawaiian Pizza</Name>
+      <Total>9.5</Total>
+    </APizza>
+    <APizza xsi:type="CheesePizza">
+      <Crust>
+        <Name>Stuffed</Name>
+        <Price>2</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Cheese Pizza</Name>
+      <Total>10.5</Total>
+    </APizza>
+  </Pizzas>
+  <StoreName>Chicago Store</StoreName>
+  <Cust>
+    <Name>cat</Name>
+    <Email>cat@gmail.com</Email>
+    <Orders />
+  </Cust>
+  <Total>21.400000000000002</Total>
+</Order><?xml version="1.0"?>
+<Order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <APizza xsi:type="HawaiianPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Ham</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Pineapple</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Hawaiian Pizza</Name>
+      <Total>9.5</Total>
+    </APizza>
+    <APizza xsi:type="CustomPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Large</Name>
+        <Price>10.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Sausage</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Bacon</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Pineapple</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Bacon</Name>
+          <Price>1</Price>
+        </Topping>
+      </Toppings>
+      <Name>Custom Pizza</Name>
+      <Total>14</Total>
+    </APizza>
+    <APizza xsi:type="PepperoniPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Pepperoni</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Pepperoni Pizza</Name>
+      <Total>9.25</Total>
+    </APizza>
+  </Pizzas>
+  <StoreName>New York Store</StoreName>
+  <Cust>
+    <Name>Catherine</Name>
+    <Email>cheatle@gmail.com</Email>
+    <Orders />
+  </Cust>
+  <Total>35.042500000000004</Total>
+</Order><?xml version="1.0"?>
+<Order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <APizza xsi:type="HawaiianPizza">
+      <Crust>
+        <Name>Stuffed</Name>
+        <Price>2</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Ham</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Pineapple</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Hawaiian Pizza</Name>
+      <Total>11.25</Total>
+    </APizza>
+    <APizza xsi:type="PepperoniPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Small</Name>
+        <Price>4.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Pepperoni</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Pepperoni Pizza</Name>
+      <Total>6.25</Total>
+    </APizza>
+  </Pizzas>
+  <StoreName>Chicago Store</StoreName>
+  <Cust>
+    <Name>cat</Name>
+    <Email>whatemail@gmail.com</Email>
+    <Orders />
+  </Cust>
+  <Total>18.725</Total>
+</Order><?xml version="1.0"?>
+<Order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <APizza xsi:type="HawaiianPizza">
+      <Crust>
+        <Name>Regular</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Ham</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Pineapple</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Hawaiian Pizza</Name>
+      <Total>9.5</Total>
+    </APizza>
+    <APizza xsi:type="PepperoniPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Pepperoni</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Pepperoni Pizza</Name>
+      <Total>9.25</Total>
+    </APizza>
+    <APizza xsi:type="PepperoniPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Pepperoni</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Pepperoni Pizza</Name>
+      <Total>9.25</Total>
+    </APizza>
+  </Pizzas>
+  <StoreName>Chicago Store</StoreName>
+  <Cust>
+    <Name>Kevin</Name>
+    <Email>kevdaman@gmail.com</Email>
+    <Orders />
+  </Cust>
+  <Total>29.96</Total>
+</Order><?xml version="1.0"?>
+<Order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <APizza xsi:type="PepperoniPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Large</Name>
+        <Price>10.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Pepperoni</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Pepperoni Pizza</Name>
+      <Total>12.25</Total>
+    </APizza>
+    <APizza xsi:type="CustomPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Small</Name>
+        <Price>4.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Pepperoni</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Ham</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Diced Tomatoes</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Mixed Onions</Name>
+          <Price>0.25</Price>
+        </Topping>
+      </Toppings>
+      <Name>Custom Pizza</Name>
+      <Total>7.25</Total>
+    </APizza>
+  </Pizzas>
+  <StoreName>New York Store</StoreName>
+  <Cust>
+    <Name>Rebecca</Name>
+    <Email>rebecca@gmail.com</Email>
+    <Orders />
+  </Cust>
+  <Total>20.865000000000002</Total>
+</Order><?xml version="1.0"?>
+<Order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <APizza xsi:type="SausagePizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Sausage</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Sausage Pizza</Name>
+      <Total>9.25</Total>
+    </APizza>
+    <APizza xsi:type="CustomPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Large</Name>
+        <Price>10.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Pepperoni</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Bacon</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Spinach</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Diced Tomatoes</Name>
+          <Price>0.25</Price>
+        </Topping>
+      </Toppings>
+      <Name>Custom Pizza</Name>
+      <Total>13.25</Total>
+    </APizza>
+  </Pizzas>
+  <StoreName>Chicago Store</StoreName>
+  <Cust>
+    <Name>Penny</Name>
+    <Email>penny1@gmail.com</Email>
+    <Orders />
+  </Cust>
+  <Total>24.075000000000003</Total>
+</Order><?xml version="1.0"?>
+<Order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <APizza xsi:type="HawaiianPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Large</Name>
+        <Price>10.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Ham</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Pineapple</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Hawaiian Pizza</Name>
+      <Total>12.5</Total>
+    </APizza>
+    <APizza xsi:type="CustomPizza">
+      <Crust>
+        <Name>Stuffed</Name>
+        <Price>2</Price>
+      </Crust>
+      <Size>
+        <Name>Large</Name>
+        <Price>10.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Pepperoni</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Green Peppers</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Mushrooms</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Mixed Onions</Name>
+          <Price>0.25</Price>
+        </Topping>
+      </Toppings>
+      <Name>Custom Pizza</Name>
+      <Total>14.25</Total>
+    </APizza>
+  </Pizzas>
+  <StoreName>Chicago Store</StoreName>
+  <Cust>
+    <Name>Max</Name>
+    <Email>maxiscool@gmail.com</Email>
+    <Orders />
+  </Cust>
+  <Total>28.622500000000002</Total>
+</Order><?xml version="1.0"?>
+<Order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <APizza xsi:type="HawaiianPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Small</Name>
+        <Price>4.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Ham</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Pineapple</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Hawaiian Pizza</Name>
+      <Total>6.5</Total>
+    </APizza>
+    <APizza xsi:type="CustomPizza">
+      <Crust>
+        <Name>Stuffed</Name>
+        <Price>2</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Pepperoni</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Black Olives</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Mushrooms</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Mixed Onions</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Bacon</Name>
+          <Price>1</Price>
+        </Topping>
+      </Toppings>
+      <Name>Custom Pizza</Name>
+      <Total>12.25</Total>
+    </APizza>
+  </Pizzas>
+  <StoreName>Chicago Store</StoreName>
+  <Cust>
+    <Name>Lily</Name>
+    <Email>lily@gmail.com</Email>
+    <Orders />
+  </Cust>
+  <Total>20.0625</Total>
+</Order>
