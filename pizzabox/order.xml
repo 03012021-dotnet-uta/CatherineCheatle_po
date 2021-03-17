@@ -646,4 +646,160 @@
     <Orders />
   </Cust>
   <Total>20.0625</Total>
+</Order><?xml version="1.0"?>
+<Order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <APizza xsi:type="CheesePizza">
+      <Crust>
+        <Name>Stuffed</Name>
+        <Price>2</Price>
+      </Crust>
+      <Size>
+        <Name>Small</Name>
+        <Price>4.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Cheese Pizza</Name>
+      <Total>7.5</Total>
+    </APizza>
+    <APizza xsi:type="CustomPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Small</Name>
+        <Price>4.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Pepperoni</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Black Olives</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Bacon</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Mixed Onions</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Mushrooms</Name>
+          <Price>0.25</Price>
+        </Topping>
+      </Toppings>
+      <Name>Custom Pizza</Name>
+      <Total>7.5</Total>
+    </APizza>
+  </Pizzas>
+  <StoreName>New York Store</StoreName>
+  <Cust>
+    <Name>Paty</Name>
+    <Email>plopez@gmail.com</Email>
+    <Orders />
+  </Cust>
+  <Total>16.05</Total>
+</Order><?xml version="1.0"?>
+<Order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <APizza xsi:type="CheesePizza">
+      <Crust>
+        <Name>Stuffed</Name>
+        <Price>2</Price>
+      </Crust>
+      <Size>
+        <Name>Medium</Name>
+        <Price>7.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Cheese Pizza</Name>
+      <Total>10.5</Total>
+    </APizza>
+    <APizza xsi:type="CustomPizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Small</Name>
+        <Price>4.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Pepperoni</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Sausage</Name>
+          <Price>1</Price>
+        </Topping>
+        <Topping>
+          <Name>Green Peppers</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Mixed Onions</Name>
+          <Price>0.25</Price>
+        </Topping>
+        <Topping>
+          <Name>Mushrooms</Name>
+          <Price>0.25</Price>
+        </Topping>
+      </Toppings>
+      <Name>Custom Pizza</Name>
+      <Total>7.5</Total>
+    </APizza>
+    <APizza xsi:type="CheesePizza">
+      <Crust>
+        <Name>Thin</Name>
+        <Price>0.25</Price>
+      </Crust>
+      <Size>
+        <Name>Small</Name>
+        <Price>4.5</Price>
+      </Size>
+      <Toppings>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+        <Topping>
+          <Name>Cheese</Name>
+          <Price>0.5</Price>
+        </Topping>
+      </Toppings>
+      <Name>Cheese Pizza</Name>
+      <Total>5.75</Total>
+    </APizza>
+  </Pizzas>
+  <StoreName>New York Store</StoreName>
+  <Cust>
+    <Name>Matt</Name>
+    <Email>math@gmail.com</Email>
+    <Orders />
+  </Cust>
+  <Total>25.4125</Total>
 </Order>
