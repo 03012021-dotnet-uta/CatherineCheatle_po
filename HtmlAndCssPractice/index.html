@@ -5,23 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marks BIG HTML Demo</title>
+  <link rel ="stylesheet" type = "text/css" href ="CssPractice.css">
 </head>
 
 <body>
-  <p style="background-color: pink;">This is a paragraph</p><br><br>
-  This is text withough a tag
+  <p id = "p1">This is a paragraph</p><br><br>
+  This is text without a tag
   <p>Mark is
   <div>very</div> grumpy</p><br>
-  <b>this is bold</b><br>
-  <i>this is italic</i><br>
-  <del>deleted text</del><br>
+  <p id ="bold">this is bold</p>
+  <p id ="italic">this is italic</p>
+  <p id ="strikethrough">deleted text</p>
   <sub>subscript</sub><br>
 
 
 
   <h2 id="id1" title="title1" class="class1 class2">this is a class</h2>
 
-  <a href="http://revature.com" style="color: pink;" target="blank">Link to Revature</a>
+  <a href="http://revature.com" target="blank">Link to Revature</a>
 
 
   <ul>
@@ -34,6 +35,9 @@
     <li>number 2</li>
   </ol>
 
+  <p id="pseudotest">This is a test. First line should be in a color.<br>
+                    this is a test</p>
+
 
   <table class="table1">
     <thead class="tableHead1">
@@ -43,10 +47,12 @@
       <th class="thead1">Profession</th>
     </thead>
     <tbody class="tbody1">
-      <tr class="trow1">1</tr>
-      <tr class="trow1">Mark</tr>
-      <tr class="trow1">Burleson</tr>
-      <tr class="trow1">SE Instructor</tr>
+        <tr class="trow1">
+            <td id = "personId">1</td>
+            <td id = "personName">Mark</td>
+            <td id = "city">Burleson</td>
+            <td id = "profession">SE Instructor</td>
+        </tr>
     </tbody>
   </table>
 
@@ -73,13 +79,6 @@
     <option value="2" selected>&gt; less than</option>
     <option value="3">&#xFFE0;</option>
   </select>
-
-
-
-
-
-
-
 
   <script src="../JsIntro/index.js"></script>
 </body>
