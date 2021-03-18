@@ -1,86 +1,103 @@
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marks BIG HTML Demo</title>
-  <link rel ="stylesheet" type = "text/css" href ="CssPractice.css">
-</head>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks BIG HTML Demo</title>
+    <link rel ="stylesheet" type = "text/css" href ="CssPractice.css">
+    </head>
 
-<body>
-  <p id = "p1">This is a paragraph</p><br><br>
-  This is text without a tag
-  <p>Mark is
-  <div>very</div> grumpy</p><br>
-  <p id ="bold">this is bold</p>
-  <p id ="italic">this is italic</p>
-  <p id ="strikethrough">deleted text</p>
-  <sub>subscript</sub><br>
+    <body>
+        <div>
+            <div class = "welcomebar">
+                <h1>Welcome</h1>
+            </div>
 
+            <div>
+                <p id = "p1">This is a paragraph</p>
+                This is text without a tag
+                <p>Mark is very grumpy</p><br>
+                <p id ="bold">this is bold</p>
+                <p id ="italic">this is italic</p>
+                <p id ="strikethrough">deleted text</p>
+                <sub>subscript</sub><br>
+                <p id="pseudotest">This is a test. First line should be in a color.<br>this is a test</p>
+            </div>
 
+            <div>
+                <h2 id="id1" title="title1" class="class1 class2">this is a class</h2>
 
-  <h2 id="id1" title="title1" class="class1 class2">this is a class</h2>
+                <a href="http://revature.com" target="blank">Link to Revature</a>
+            </div>
+            
+            <div class = "unorderlistdiv">
+                <ul>
+                    <li>bullet 1</li>
+                    <li>bullet 2</li>
+                </ul>
+            </div>
+        
+            <div class="orderlistdiv">
+                <ol>
+                    <li>number 1</li>
+                    <li>number 2</li>
+                </ol>
+            </div>
 
-  <a href="http://revature.com" target="blank">Link to Revature</a>
+            <div>
+                <table class="table1">
+                    <thead class="tableHead1">
+                    <th class="thead1">PersonId</th>
+                    <th class="thead1">Name</th>
+                    <th class="thead1">city</th>
+                    <th class="thead1">Profession</th>
+                    </thead>
+                    <tbody class="tbody1">
+                        <tr class="trow1">
+                            <td id = "personId">1</td>
+                            <td id = "personName">Mark</td>
+                            <td id = "city">Burleson</td>
+                            <td id = "profession">SE Instructor</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
+            <div>
+                <form action="functionName()" method="get">
+                    <div class="nameInputDiv">
+                    <label for="fname">First Name:</label>
+                    <input type="text" class="nameInput" name="fname" id="fnameId" placeholder="First Name" autofocus>
+                    <!--autofocus stayson the first instance of the autofocus keyword.-->
+                    </div>
+                    <div class="nameInputDiv">
+                    <label for="fname">Last Name:</label>
+                    <input type="text" class="nameInput" name="lname" id="lnameId" autofocus placeholder="Last Name">
+                    </div>
+                    <div>
+                    <label for="color">Pick a Color</label>
+                    <input type="hidden" name="colorPicker" id="colorPickerId">
+                    <!-- get the value of a input field with => event.coloPicker.value-->
+                    </div>
+                    <button type="submit">Submit Button</button>
+                </form>
+            </div>
 
-  <ul>
-    <li>bullet 1</li>
-    <li>bullet 2</li>
-  </ul>
+            <div>
+                <select name="select" id="selectId">
+                    <option value="1">&lt; greater than</option>
+                    <option value="2" selected>&gt; less than</option>
+                    <option value="3">&#xFFE0;</option>
+                </select>
+            </div>
+            <div class="bottombar">
+                <p>Website info</p>
+            </div>
 
-  <ol>
-    <li>number 1</li>
-    <li>number 2</li>
-  </ol>
+        </div>
+        <script src="../JsIntro/index.js"></script>
 
-  <p id="pseudotest">This is a test. First line should be in a color.<br>
-                    this is a test</p>
-
-
-  <table class="table1">
-    <thead class="tableHead1">
-      <th class="thead1">PersonId</th>
-      <th class="thead1">Name</th>
-      <th class="thead1">city</th>
-      <th class="thead1">Profession</th>
-    </thead>
-    <tbody class="tbody1">
-        <tr class="trow1">
-            <td id = "personId">1</td>
-            <td id = "personName">Mark</td>
-            <td id = "city">Burleson</td>
-            <td id = "profession">SE Instructor</td>
-        </tr>
-    </tbody>
-  </table>
-
-  <form action="functionName()" method="get">
-    <div class="nameInputDiv">
-      <label for="fname">First Name:</label>
-      <input type="text" class="nameInput" name="fname" id="fnameId" placeholder="First Name" autofocus>
-      <!--autofocus stayson the first instance of the autofocus keyword.-->
-    </div>
-    <div class="nameInputDiv">
-      <label for="fname">Last Name:</label>
-      <input type="text" class="nameInput" name="lname" id="lnameId" autofocus placeholder="Last Name">
-    </div>
-    <div>
-      <label for="color">Pick a Color</label>
-      <input type="hidden" name="colorPicker" id="colorPickerId">
-      <!-- get the value of a input field with => event.coloPicker.value-->
-    </div>
-    <button type="submit">Submit Button</button>
-  </form>
-
-  <select name="select" id="selectId">
-    <option value="1">&lt; greater than</option>
-    <option value="2" selected>&gt; less than</option>
-    <option value="3">&#xFFE0;</option>
-  </select>
-
-  <script src="../JsIntro/index.js"></script>
-</body>
+    </body>
 
 </html>
