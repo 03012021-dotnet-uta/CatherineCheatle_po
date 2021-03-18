@@ -1,6 +1,53 @@
+.welcomebar
+{
+    padding: 50px;
+    border: solid black; 
+    box-shadow: black;
+    background-color: #c0ded9;
+}
+
+.bottombar
+{
+    padding: 20px;
+    background-color: #3b3a30;
+
+}
+
+.orderlistdiv
+{
+    float: right;
+    padding : 1%; 
+    color: white; 
+    background-color: b2c2bf; 
+    width: 45%; 
+    border: solid black; 
+    list-style-type: upper-roman;
+}
+
+.unorderlistdiv
+{
+    float: left;
+    padding : 1%; 
+    color: white; 
+    background-color: b2c2bf; 
+    width: 45%; 
+    border: solid black; 
+}
+
+
+h1
+{
+    
+    text-align: center;
+}
 #p1
 {
-    background-color: pink;
+    background-color: #b2c2bf;
+    padding: 3em;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 
 #bold
@@ -21,6 +68,7 @@
 .class1
 {
     color: blue;
+    padding: 2em;
 }
 
 a:link
@@ -41,8 +89,14 @@ a:hover
 
 ul
 {
-    color:mediumaquamarine;
+    list-style-type: square;
 }
+
+ol
+{
+    list-style-type: upper-roman;
+}
+
 
 #pseudotest::first-line
 {
@@ -56,8 +110,15 @@ th.thead1
 
 table, th, tr, td{
     border: 1px solid black;
+    text-align: center;
 }
 
 #selectId {
     color: purple;
+}
+
+html
+{
+    margin: 0em;
+    background-color: #eaece5;
 }
