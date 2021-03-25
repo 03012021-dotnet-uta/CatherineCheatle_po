@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetnSaltyInteractive</title>
+    <!--CSS-->
+    <style>
+        *{
+            font-family: fantasy;
+        }
+        header{
+            background-color: #ffab73;
+            border: 3px #fff9b0 dotted;
+            color: white;
+            position: relative;
+            text-shadow: 1px 1px 1px black;
+        }
+        #mainScreen
+        {
+            margin: 10px;
+            display: inline;
+        }
+        h2{
+            color: #ffab73;
+            text-shadow: 1px 1px 1px #ffab73,
+                        2px 2px 1px black;
+        }
+        button{
+            padding: 5px;
+            background-color: #ffaec0;
+            border: none;
+            border-radius: 35%;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        #inputStart, #inputEnd, #inputNumPerLine{
+            padding: 10px;
+            display: none;
+            margin-bottom: 10px;
+        }
+        #startIndexBox, #endIndexBox, #numPerLineBox{
+            width: 100px;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 4px;
+        }
+        #printScreen{
+            padding: 10px;
+            display: none;
+            overflow-x: scroll;
+        }
+        p{
+            width: 600px;
+            color: #ffaec0;
+            font-weight: bold;
+        }
+        #printScreen p{
+            width: 100%;
+        }
+        label{
+            color: #ffab73;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Sweet and Salty
+        </h1>
+    </header>
+    <!--Landing page for program description-->
+    <div id= "mainScreen">
+        <h2>Welcome to Sweet and Salty</h2>
+        <p>For this interactive game you will be asked to input three values:
+            one for start, one for stop and one for total numbers per line. The
+            start and stop input will be used for the range of numbers to print through
+            and the last input will be for how many numbers will be printed per line.
+            The start and end of the range should be a least 200 apart and no more than
+            10,000 apart. </p>
+            <br>
+        <p> After your input the program will then print the numbers to the screen 
+            if the number is divisible by 3, it will print the word Sweet instead of the number,
+            if the number is divisible by 5, it will print the word Salty, and if the number is 
+            divisible by 3 and 5 it will print SweetnSalty. At the end of the number range 
+            the number of times each word occurs will be printed to the screen.
+        </p>
+
+        <br>
+
+        <label>Click me to start!</label>
+        <button onclick="startButtonClick()">Click here!</button>
+    </div>
+    
+    <!--Input page for user to enter numbers for start and end index 
+        and input for number of numbers per line-->
+    <div id="inputStart">
+        <h2>Start Input</h2>
+        <p>Please enter a start number then click enter: </p>
+        <label>Enter here:</label>
+        <input type="number" id="startIndexBox" required min="1">
+        <button onclick="inputStartClick()">Enter</button>
+        <p id="userStartInput"></p>
+    </div>
+
+    <div id = "inputEnd">
+        <h2>End Input</h2>
+        <p id="endCriteria"></p>
+        <label>Enter here:</label>
+        <input type="number" id="endIndexBox" required min="1">
+        <button onclick="inputEndClick()">Enter</button>
+        <p id="userEndInput"></p>
+    </div>
+
+    <div id = "inputNumPerLine">
+        <h2>Numbers Per Line Input</h2>
+        <p id="numPerLineCriteria"></p>
+        <label>Enter here:</label>
+        <input type="number" id="numPerLineBox" required min="1">
+        <button onclick="numPerLineClick()">Enter</button>
+        <p id="userNumPerLineInput"></p>
+    </div>
+
+    <div id = "printScreen">
+        <h2>Results</h2>
+    </div>
+
+    <!--Javascript-->
+    <script>
+        'use strict'
+        //Init variables
+        let startIndex = 0;
+        let endIndex = 0;
+        let numPerLine = 0;
+
+        //Constraints on how far apart end index must be from the start index
+        let minApart = 200;
+        let maxApart = 10000;
+        let lowerBound = 0;
+        let upperBound = 0;
+        
+        //Constraint for number per line
+        let minAmt = 0;
+        let rate = 0.01;
+
+        function startButtonClick() {
+            let mainDisplay = document.getElementById("mainScreen");
+            let inputStartDisplay = document.getElementById("inputStart");
+            mainDisplay.style.display = "none";
+            inputStartDisplay.style.display = "block";
+            var startBox = document.getElementById("startIndexBox");
+            startBox.value = "";
+            var endBox = document.getElementById("endIndexBox");
+            endBox.value = "";
+            var numLineBox = document.getElementById("numPerLineBox");
+            numPerLine = "";
+            
+        }
+        function inputStartClick(){
+            let startNum =  document.getElementById("startIndexBox").value;
+            if(startNum == "")
+            {
+                //Display warning
+                document.getElementById("startIndexBox").style.border = "1px solid red";
+                document.getElementById("startIndexBox").style.background = "#FFF9F9";
+                document.getElementById("userStartInput").innerHTML = "<p style = 'color: red'>" + "Please enter valid number</p>"
+            }
+            else if(startNum < 1)
+            {
+                //Display warning
+                document.getElementById("startIndexBox").style.border = "1px solid red";
+                document.getElementById("startIndexBox").style.background = "#FFF9F9";
+                document.getElementById("userStartInput").innerHTML = "<p style = 'color: red'>" + "Please enter valid number</p>"
+            }
+            else
+            {
+                startIndex = parseInt(startNum);
+                //Set text box color to accepted
+                document.getElementById("startIndexBox").style.border = "1px solid green";
+                document.getElementById("startIndexBox").style.background = "white";
+                document.getElementById("userStartInput").innerHTML = "You have chosen " +
+                (startIndex.toLocaleString('en-US')) + " for the starting index";
+                document.getElementById("startIndexBox").disabled = true;
+
+                //Calculate bounds for end index
+                lowerBound = startIndex + minApart;
+                upperBound = startIndex + maxApart;
+                document.getElementById("endCriteria").innerHTML = "Please choose an ending index between the values " 
+                + (lowerBound.toLocaleString('en-US')) + " and " + (upperBound.toLocaleString('en-US'));
+                document.getElementById("inputEnd").style.display = "block";
+            }
+        }
+        function inputEndClick(){
+            let endNum =  document.getElementById("endIndexBox").value;
+
+            if(endNum == "")
+            {
+                //Display Warning
+                document.getElementById("endIndexBox").style.border = "1px solid red";
+                document.getElementById("endIndexBox").style.background = "#FFF9F9";
+                document.getElementById("userEndInput").innerHTML = "<p style = 'color: red'>" + "Please enter valid number</p>"
+            }
+            else if(endNum < lowerBound || endNum > upperBound)
+            {
+                //Display warning
+                document.getElementById("endIndexBox").style.border = "1px solid red";
+                document.getElementById("endIndexBox").style.background = "#FFF9F9";
+                document.getElementById("userEndInput").innerHTML = "<p style = 'color: red'>" + "Please enter valid number</p>"
+            }
+            else
+            {
+                endIndex = parseInt(endNum);
+                //Set text box color to accepted
+                document.getElementById("endIndexBox").style.border = "1px solid green";
+                document.getElementById("endIndexBox").style.background = "white";
+                document.getElementById("userEndInput").innerHTML = "You have chosen " +
+                (endIndex.toLocaleString('en-US')) + " for the ending index";
+                document.getElementById("endIndexBox").disabled = true;
+
+                //Calculate bound for numbers per line
+                let totalNum = endIndex - startIndex;
+                minAmt = totalNum * rate;
+
+                document.getElementById("numPerLineCriteria").innerHTML = "Please choose a number equal to or greater than " 
+                + minAmt + " for the numbers per line to be displayed."
+                document.getElementById("inputNumPerLine").style.display = "block";
+            }
+        }
+        function numPerLineClick()
+        {
+            let userInput = document.getElementById("numPerLineBox").value;
+
+            if(userInput == "")
+            {
+                //Display warning
+                document.getElementById("numPerLineBox").style.border = "1px solid red";
+                document.getElementById("numPerLineBox").style.background = "#FFF9F9";
+                document.getElementById("userNumPerLineInput").innerHTML = "<p style = 'color: red'>" + "Please enter valid number</p>"
+            }
+            else if(userInput < minAmt || userInput > endIndex)
+            {
+                //Display warning
+                document.getElementById("numPerLineBox").style.border = "1px solid red";
+                document.getElementById("numPerLineBox").style.background = "#FFF9F9";
+                document.getElementById("userNumPerLineInput").innerHTML = "<p style = 'color: red'>" + "Please enter valid number</p>"
+            }
+            else
+            {
+                numPerLine = parseInt(userInput);
+                //Set text box color to accepted
+                document.getElementById("numPerLineBox").style.border = "1px solid green";
+                document.getElementById("numPerLineBox").style.background = "white";
+                document.getElementById("userNumPerLineInput").innerHTML = "You have chosen " +
+                (numPerLine.toLocaleString('en-US')) + " for numbers per line";
+                document.getElementById("numPerLineBox").disabled = true;
+
+                var label = document.createElement("label");
+                label.innerHTML = "Click to continue";
+                label.style.margin = "10px";
+                var button = document.createElement("button");
+                button.innerHTML = "Continue";
+
+                var inputDiv = document.getElementById("inputNumPerLine");
+                inputDiv.appendChild(label);
+                inputDiv.appendChild(button);
+
+                button.addEventListener ("click", function() {
+                    //Hide input screen
+                    document.getElementById("inputStart").style.display = "none";
+                    document.getElementById("inputEnd").style.display = "none";
+                    document.getElementById("inputNumPerLine").style.display = "none";
+                    button.style.display = "none";
+                    label.style.display = "none";
+                    document.getElementById("printScreen").style.display = "block";
+                    playSweetnSalty();
+                });
+
+            }
+
+        }
+        function playSweetnSalty(){
+            //init variables
+            let firstWord = "sweet";
+            let secondWord = "salty";
+            let thirdWord = "saltNSalty";
+            let firstNum = 3;
+            let secondNum = 5;
+            let firstWordCounter = 0;
+            let secondWordCounter = 0;
+            let thirdWordCounter = 0;
+            let numCounter = 1;
+
+            // set a string to hold 10 numbers in a line to later print to console
+            let s = "";
+
+            // loop to check each number
+            for(let i = startIndex; i <= endIndex; i++)
+            {
+                // if the current number is divisible by the first and second number, I want to add the third word 
+                // to the s string plus a space and increment counter by one 
+                if ((i % firstNum == 0) && (i % secondNum == 0))
+                {
+                    s += (thirdWord + " ");
+                    thirdWordCounter++;
+                }
+                // if the current number is divisible by the first number, I want to add the first word 
+                // to the s string plus a space and increment counter by one
+                else if (i % firstNum == 0)
+                {
+                    s += (firstWord + " ");
+                    firstWordCounter++;
+                }
+                // if the current number is divisible by the second number, I want to add the second word 
+                // to the s string plus a space and increment counter by one
+                else if (i % secondNum == 0)
+                {
+                    s += (secondWord + " ");
+                    secondWordCounter++;
+                }
+                // if the current number is not divisble by either number, just print the number
+                else
+                {
+                    s += ((i.toLocaleString('en-US')) + " ");
+                }
+                // once 10 values have been concatenated to string, so print it to the console and reset the
+                // string to hold the next 10 values
+                if(numCounter % numPerLine == 0)
+                {
+                    console.log(s);
+                    var result = document.createElement("p");
+                    result.innerHTML = s;
+                    result.style.margin = "10px";
+                    var printDiv = document.getElementById("printScreen");
+                    printDiv.appendChild(result);
+                    s = "";
+                }
+                //track the number count for numbers per line
+                numCounter++;
+                
+            }
+            //if there is anything left in the s buffer, print it now
+            console.log(s);
+            result = document.createElement("p");
+            result.innerHTML = s;
+            result.style.margin = "10px";
+            printDiv.appendChild(result);
+
+            console.log("The number of times " + firstWord + " occurs: " + firstWordCounter);
+            console.log("The number of times " + secondWord + " occurs: " + secondWordCounter);
+            console.log("The number of times " + thirdWord + " occurs: " + thirdWordCounter);
+
+            //print counters
+            let lineBreak = document.createElement("br");
+            printDiv.appendChild(lineBreak);
+            var word1 = document.createElement("p");
+            word1.innerHTML = "The number of times " + firstWord + " occurs: " + (firstWordCounter.toLocaleString('en-US'));
+            word1.style.margin = "10px";
+            printDiv.appendChild(word1);
+
+            var word2 = document.createElement("p");
+            word2.innerHTML = "The number of times " + secondWord + " occurs: " + (secondWordCounter.toLocaleString('en-US'));
+            word2.style.margin = "10px";
+            printDiv.appendChild(word2);
+
+            var word3 = document.createElement("p");
+            word3.innerHTML = "The number of times " + thirdWord + " occurs: " + (thirdWordCounter.toLocaleString('en-US'));
+            word3.style.margin = "10px";
+            printDiv.appendChild(word3);
+
+            //Create a label and button to return to home page
+            var homeLabel = document.createElement("label");
+            var homeButton = document.createElement("button");
+            homeLabel.innerHTML = "Click the button to return to the main screen";
+            homeButton.innerHTML = "Back to Home";
+            homeLabel.style.marginRight ="10px";
+            lineBreak = document.createElement("br");
+            printDiv.appendChild(lineBreak);
+            printDiv.appendChild(homeLabel);
+            printDiv.appendChild(homeButton);
+
+            //event handler for when home button is pressed
+            homeButton.addEventListener ("click", function() {
+                //Hide result screen
+                var node = document.getElementById("printScreen");
+                node.style.display = "none";
+                //Reset pages to start over
+                node.innerHTML = "<h2>Results<h2>";
+                var startBox = document.getElementById("startIndexBox");
+                startBox.disabled = false;
+                startBox.style.border = "1px solid black";
+                startBox.style.background = "white";
+                startBox.value = "";
+
+                var endBox = document.getElementById("endIndexBox");
+                endBox.disabled = false;
+                endBox.style.border = "1px solid black";
+                endBox.style.background = "white";
+                endBox.value = "";
+
+                var numLineBox = document.getElementById("numPerLineBox");
+                numLineBox.disabled = false;
+                numLineBox.style.border = "1px solid black";
+                numLineBox.style.background = "white";
+                numLineBox.value = "";
+
+                document.getElementById("userStartInput").innerHTML = "";
+                document.getElementById("userEndInput").innerHTML = "";
+                document.getElementById("userNumPerLineInput").innerHTML = "";
+
+                let mainDisplay = document.getElementById("mainScreen");
+                mainDisplay.style.display = "block";
+            });
+
+        }
+
+    </script>
+</body>
+</html>
